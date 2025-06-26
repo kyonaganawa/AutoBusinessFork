@@ -42,7 +42,7 @@ def build_url(youtube_video_id: str) -> str:
 
 def rem_temp_files() -> None:
     """
-    Removes temporary files in the `.mp` directory.
+    Removes temporary files in the `.mp` directory, except for MP4 files and JSON files.
 
     Returns:
         None
@@ -53,7 +53,8 @@ def rem_temp_files() -> None:
     files = os.listdir(mp_dir)
 
     for file in files:
-        if not file.endswith(".json"):
+        # Keep JSON and MP4 files
+        if not file.endswith(".json") and not file.endswith(".mp4"):
             os.remove(os.path.join(mp_dir, file))
 
 def fetch_songs() -> None:
@@ -97,14 +98,43 @@ def fetch_songs() -> None:
 def choose_random_song() -> str:
     """
     Chooses a random song from the songs/ directory.
+    Only includes valid MP3 files and performs validation checks.
 
     Returns:
-        str: The path to the chosen song.
+        str: The path to the chosen song, or None if no valid songs are found.
     """
     try:
-        songs = os.listdir(os.path.join(ROOT_DIR, "Songs"))
+        songs_dir = os.path.join(ROOT_DIR, "Songs")
+        if not os.path.exists(songs_dir):
+            error(f"Songs directory not found at: {songs_dir}")
+            return None
+
+        # Get all MP3 files from the directory
+        songs = [f for f in os.listdir(songs_dir) 
+                if f.lower().endswith('.mp3') 
+                and os.path.isfile(os.path.join(songs_dir, f))
+                and not f.startswith('.')]  # Exclude hidden files like .DS_Store
+        
+        if not songs:
+            error("No valid MP3 files found in Songs directory")
+            return None
+            
+        # Choose a random song
         song = random.choice(songs)
+        song_path = os.path.join(songs_dir, song)
+        
+        # Validate the chosen file
+        if not os.path.exists(song_path):
+            error(f"Chosen song file does not exist: {song_path}")
+            return None
+            
+        if os.path.getsize(song_path) == 0:
+            error(f"Chosen song file is empty: {song_path}")
+            return None
+            
         success(f" => Chose song: {song}")
-        return os.path.join(ROOT_DIR, "Songs", song)
+        return song_path
+        
     except Exception as e:
         error(f"Error occurred while choosing random song: {str(e)}")
+        return None

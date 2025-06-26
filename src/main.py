@@ -1,5 +1,7 @@
+import os
 import schedule
 import subprocess
+import shutil
 
 from art import *
 from cache import *
@@ -15,6 +17,16 @@ from classes.YouTube import YouTube
 from prettytable import PrettyTable
 from classes.Outreach import Outreach
 from classes.AFM import AffiliateMarketing
+
+# Create videos directory if it doesn't exist
+VIDEOS_DIR = os.path.join(ROOT_DIR, "videos")
+if not os.path.exists(VIDEOS_DIR):
+    os.makedirs(VIDEOS_DIR)
+
+# Create images directory if it doesn't exist
+IMAGES_DIR = os.path.join(ROOT_DIR, "images")
+if not os.path.exists(IMAGES_DIR):
+    os.makedirs(IMAGES_DIR)
 
 def main():
     """Main entry point for the application, providing a menu-driven interface
@@ -151,7 +163,13 @@ def main():
                     tts = TTS()
 
                     if user_input == 1:
-                        youtube.generate_video(tts)
+                        video_path = youtube.generate_video(tts)
+                        # Save video to permanent directory
+                        if video_path:
+                            video_name = os.path.basename(video_path)
+                            permanent_path = os.path.join(VIDEOS_DIR, video_name)
+                            shutil.copy2(video_path, permanent_path)
+                            info(f" => Saved video permanently to: {permanent_path}")
                         upload_to_yt = question("Do you want to upload this video to YouTube? (Yes/No): ")
                         if upload_to_yt.lower() == "yes":
                             youtube.upload_video()

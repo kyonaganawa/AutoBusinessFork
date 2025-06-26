@@ -1,0 +1,74 @@
+{
+  "aa3722e3-af2e-4847-91c7-186b14b6841a": {
+    "id": "aa3722e3-af2e-4847-91c7-186b14b6841a",
+    "created_at": "2025-02-24T11:35:34.662031",
+    "niche": "Science",
+    "language": "English",
+    "status": "completed",
+    "steps_completed": [
+      "topic",
+      "script",
+      "metadata",
+      "image_prompts",
+      "images",
+      "images",
+      "images",
+      "images",
+      "images",
+      "images",
+      "images",
+      "images",
+      "images",
+      "images",
+      "images",
+      "tts"
+    ],
+    "data": {
+      "topic": {
+        "subject": "\"Exploring the Science Behind Black Holes: How They Form and What Happens Inside.\""
+      },
+      "script": {
+        "content": "Black holes form when massive stars collapse under their own gravity after exhausting their nuclear fuel. Their gravity is so strong that not even light can escape, creating an event horizon. Inside, matter is crushed into an infinitely dense point called a singularity. Scientists are still unraveling the mysteries of what lies beyond this extreme region."
+      },
+      "metadata": {
+        "title": "\"Inside Black Holes: Formation, Science & Mysteries Unveiled! #Space #BlackHoles #Astrophysics\"",
+        "description": "A captivating video exploring the formation of black holes, starting with the collapse of massive stars after depleting their nuclear fuel. The video delves into the immense gravity that creates an event horizon where light cannot escape, and unveils the mysterious singularity, an infinitely dense point at the core. Featuring stunning visuals and expert insights, it highlights the ongoing scientific quest to uncover the secrets hidden within these enigmatic cosmic phenomena."
+      },
+      "image_prompts": {
+        "prompts": [
+          "A captivating illustration of a massive star collapsing into a black hole, with vibrant colors swirling around the event horizon, portraying the immense gravity at play in the universe.",
+          "An awe-inspiring depiction of swirling gas and dust being pulled into a black hole, illustrating the chaotic beauty of cosmic forces drawing matter into the abyss.",
+          "A dramatic portrayal of the singularity at the center of a black hole, surrounded by a luminous accretion disk of colorful gas, highlighting the mysterious and unfathomable depths of space.",
+          "An intricate visualization of a spaceship approaching the event horizon of a black hole, showcasing the intense gravitational forces and the stunning cosmic scenery in the backdrop.",
+          "A surreal landscape of a black hole viewed from a distant galaxy, with dramatic lighting and colorful cosmic phenomena, emphasizing the unknown mysteries lurking within.",
+          "A thought-provoking image of scientists conducting research on black holes, surrounded by holographic displays of gravitational waves and cosmic data, encapsulating the pursuit of knowledge in astrophysics.",
+          "An artistic representation of the warping of space-time around a black hole, with vibrant colors and distorted light, illustrating the bending of reality in the presence of extreme gravity.",
+          "A close-up view of the event horizon, with beams of light curving dramatically into the darkness, capturing the eerie beauty and terror of the inescapable pull of a black hole.",
+          "An imaginative scene of a black hole surrounded by colorful nebulae and distant stars, highlighting the contrast between the vibrant cosmic environment and the ominous void.",
+          "A fantastical interpretation of what might exist inside a black hole, with swirling colors and abstract shapes representing the unknown, sparking curiosity about the enigmatic nature of these cosmic giants."
+        ]
+      },
+      "images": {
+        "paths": [
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/19495026-8fc3-402f-93a6-48079bb5bec5.png",
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/4f1db920-f9ae-4236-a6bd-b24faf8afa58.png",
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/0b2e9864-99ef-4bf0-ae9a-1ae4bb10fbdb.png",
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/efa25701-4315-43c8-b70e-8b32ddacd3d7.png",
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/892331db-bed4-4df6-80ee-4652f276b3f7.png",
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/54ececfb-03e8-4e5a-9f67-28c701550bed.png",
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/03889fbc-4962-4fa5-b0de-3aac2c5ef1d8.png",
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/9266ecaa-9829-4c9c-a06d-9deb3f0aab7a.png",
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/08b59341-bca2-4432-9e2f-1767d3bd2211.png",
+          "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/2eb8e867-87d8-4ae2-9413-90663e31692b.png"
+        ],
+        "completed": true
+      },
+      "tts": {
+        "path": "/Users/naganawa/Documents/Projects/AutoBusinessFork/.mp/d9ea650b-63be-455e-8558-5fb96f748572.wav"
+      }
+    },
+    "last_updated": "2025-02-24T11:39:06.711237",
+    "video_path": "/Users/naganawa/Documents/Projects/AutoBusinessFork/videos/3c2982f6-4db1-4ec5-81ac-d3719c713961.mp4",
+    "completed_at": "2025-02-24T11:40:02.469617"
+  }
+}
